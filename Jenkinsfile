@@ -5,8 +5,9 @@ pipeline {
         stage('Checkout') {
             steps {
                 echo 'Checking out source code...'
-                // In a real scenario, this would checkout from Git
-                echo 'Source code ready!'
+                git branch: 'main',
+                    url: 'https://github.com/Jadhav-Prathamesh-01/jenlkins.git'
+                echo 'Source code checked out from Git!'
             }
         }
         
